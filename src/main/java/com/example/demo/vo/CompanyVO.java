@@ -3,10 +3,16 @@ package com.example.demo.vo;
 
 import java.util.Date;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
+@Entity
+@Table(name = "company")
 public class CompanyVO {
+	@Id
 	private int c_no;
 	private String c_name;
 	private String c_addr;
