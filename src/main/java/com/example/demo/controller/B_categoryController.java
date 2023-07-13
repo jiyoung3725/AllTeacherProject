@@ -15,8 +15,5 @@ public class B_categoryController {
 	@Autowired
 	private B_categoryService ctg;
 	
-	@GetMapping("/header")
-	public void find() {
-		
-	}
+
 }
