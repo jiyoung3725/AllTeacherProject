@@ -1,0 +1,45 @@
+body{
+	margin-left: 5%;
+	margin-right: 5%;
+
+}
+/*캐러셀 css*/
+#carouselExampleIndicators{
+	margin-top: 30px;
+	margin-right: 0px;
+	padding-left: 5%;
+	padding-right: 5%;
+	height : 300px;
+}
+.carousel-inner{
+	height : 300px;
+}
+/*card css*/
+.container{
+	text-align: center;
+	margin-top: 50px;
+}
+
+.cardAll{
+	display: flex;
+	justify-content: center;
+}
+.cardAll>h5{
+	text-align: center;
+	font-weight: bold;
+}
+.card{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.card-img-top{
+	height:200px;
+}
+#btn_detail{
+	background-color: #58b483;
+	border: none;
+}
+#btn_detail:hover{
+	background-color: #43a06f;
+	
+}
