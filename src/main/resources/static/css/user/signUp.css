@@ -1,0 +1,47 @@
+@charset "UTF-8";
+#container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+#commons_signUpForm{
+	text-align: start;
+	width: 400px;
+}
+#company_signUpForm{
+	display: none;
+	text-align: start;
+	width: 400px;
+}
+#commons_signUpForm>input,#company_signUpForm>input {
+	width:100%;
+	margin-bottom: 15px;
+}
+#commons_signUpForm>span,#company_signUpForm>span {
+	font-weight: 700;
+	color: #323232;
+}
+#chkbox{
+	accent-color: green;
+}
+#custom_btn{
+	background-color: #58b483;
+	color: white;
+	border: none;
+	border-radius: 30px;
+}
+#custom_btn:hover{
+	background-color: #58b483;
+}
+
+#btn_custom{
+	background-color: #43a06f;
+	color: white;
+	border: none;
+	border-radius: 30px;
+	width:110px;
+	margin-left: 6px;
+}
+#btn_custom:hover{
+	background-color: #43a06f;
+}

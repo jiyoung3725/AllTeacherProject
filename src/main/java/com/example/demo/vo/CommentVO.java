@@ -6,13 +6,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
+
 @Data
+@Table(name="comment")
 @Entity
-@Table(name = "comment")
+
 public class CommentVO {
 	@Id
-	private int boardNo;
-	private int userNo;
-	private String comment;
-	private Date commentUpdate;
+	private int comment_no;
+	private int comunity_no;
+	private String comment_content;
+	private Date comment_update;
+
 }

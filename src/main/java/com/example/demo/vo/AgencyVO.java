@@ -7,10 +7,12 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "b_category")
-public class B_categoryVO {
-	@Id
-	private int categoryNo;
-	private String categoryName;
+@Table(name="agency")
+public class AgencyVO {
 
+	@Id
+	private int agency_no;
+	private String agency_name;
+	private String agency_address;
+	private int agency_score;
 }

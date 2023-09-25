@@ -1,10 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>회원가입</title>
+<link rel="stylesheet" href="/css/user/signUp.css" />
 </head>
 <body>
+	<div th:include="main/header.html"></div>
+	
+	<div style="text-align: center; margin-bottom: 15px; margin-top: 30px;">
+		<input class="commons" id="chkbox" type="radio" value="1" name="group" checked/> 일반회원
+		<input class="company" id="chkbox" type="radio" value="2" name="group" style="margin-left: 15px;"/> 기업회원 
 
+	</div>
+	
+	<div id="container">
+		<form id="commons_signUpForm">
+			<span>이름</span> <br /> <input type="text" class="user_name" placeholder="아이디를 입력하세요" /> <br />
+			<span>아이디</span> <br /> <input type="text" class="user_id" placeholder="아이디를 입력하세요" style="width: 70%;"/> <button class="id_check" type="button" id="btn_custom" >중복확인</button> <br />
+			<span>비밀번호</span>  <br /> <input type="password" class="user_pwd" placeholder="비밀번호를 입력하세요"/> <br />
+			<span>비밀번호 중복확인</span>  <br /> <input type="password" class="user_pwd_check" placeholder="비밀번호를 다시 입력하세요" style="width: 70%;"/><button type="button" class="pwd_check" id="btn_custom">비밀번호 확인</button>  <br />
+
+			<span>주소</span>  <br />
+			<input type="text" id="sample6_address" placeholder="주소" style="width: 70%;">
+			<input id="btn_addr" type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" style="width: 29%;"><br>
+			<input type="text" id="sample6_detailAddress" placeholder="상세주소" style="width: 70%;">
+			<input type="text" id="sample6_extraAddress" placeholder="참고항목" style="width: 29%;"> <br />	
+			
+			<span>전화번호</span>  <br /> <input type="tel" class="user_phone" placeholder="'-'를 제외한 전화번호 11자리 이상을 입력해주세요"/><br />
+			<span>이메일</span>  <br /> <input type="email" class="user_mail" style="width: 47%;"/> @ <input type="email" style="width: 47%;"/> 
+			<span>생년월일</span>  <br /> <input type="date" class="user_birth" ><br />
+			<input type="submit" value="가입하기" id="custom_btn"/>
+		</form>
+		
+		
+		<form id="company_signUpForm">
+			<span>이름</span>  <br /> <input type="text" placeholder="이름을 입력하세요"/> <br />		
+			<span>아이디</span> <br /> <input class="company_id" type="text" placeholder="아이디를 입력하세요" style="width: 70%;"/> <button class="company_id_check" type="button" id="btn_custom" >중복확인</button> <br />
+			<span>비밀번호</span> <br /> <input class="company_pwd" type="password" placeholder="비밀번호를 입력하세요"/> <br />
+			<span>비밀번호 중복확인</span>  <br /> <input class="company_pwd_check_input" type="password" placeholder="비밀번호를 다시 입력하세요" style="width: 70%;"/><button type="button" class="company_pwd_check" id="btn_custom">비밀번호 확인</button>  <br />
+			<span>전화번호</span>  <br /> <input type="text" placeholder="'-'를 제외한 전화번호를 입력하세요"/> <br />			 
+			<span>생년월일</span>  <br /> <input type="date" ><br />
+			
+			*기관 정보* <br />
+			<span>기관명</span>  <br /> <input type="text" placeholder="기관의 이름을 입력하세요"/> <br />	
+			<span>주소</span>  <br />
+			<input type="text" id="sample6_address" placeholder="주소" style="width: 70%;">
+			<input id="btn_addr" type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" style="width: 29%;"><br>
+			<input type="text" id="sample6_detailAddress" placeholder="상세주소" style="width: 70%;">
+			<input type="text" id="sample6_extraAddress" placeholder="참고항목" style="width: 29%;"> <br />	
+			<span>전화번호</span>  <br /> <input type="text" placeholder="'-'를 제외한 기관 전화번호를 입력하세요"/> <br />	
+			<span>이메일</span>  <br /> <input type="email" style="width: 47%;"/> @ <input type="email" style="width: 47%;"/>			
+				
+			<input type="submit" value="가입하기" id="custom_btn"/>
+		</form>
+	</div>
+	
+	<div th:include="main/footer.html"></div>
+	
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="/js/user/signUp.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </body>
 </html>

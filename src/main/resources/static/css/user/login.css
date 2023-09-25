@@ -1,4 +1,54 @@
 @charset "UTF-8";
 .container{
+	margin-top: 30px;
 	text-align: center;
+}
+#name{
+	font-size: 15pt;
+	color: green;
+	font-weight: bold;
+}
+#custom_btn{
+	width:400px;
+	border: none;
+	border-radius: 30px;
+	background-color: #58b483;
+	color: white;
+	font-size: 12pt;
+	font-weight: bold;
+}
+#custom_btn:hover{
+	background-color: #43a06f;
+	
+}
+#sns{
+	margin : 10px 0px 20px 0px;
+	width:100%;
+	display: flex;
+	float: left;
+	justify-content: center;
+}
+#naver, #kakao{
+	padding: 10px;
+	width: 70px;
+	height: 70px;
+	overflow: hidden;
+	border-radius: 30px;
+}
+
+#find{
+	text-decoration: none;
+	color : blue;
+}
+::placeholder{
+	color: lightgray;
+}
+
+input{
+	width : 400px;
+	height: 30px;
+}
+#logo{
+	text-align: center;
+	margin-top: 10%;
 }
