@@ -40,9 +40,16 @@
 ##
 
 #### 상세화면
+##### [로그인 및 회원가입]
+<img width="45%" height="370" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/7f31680d-20de-4ed0-a091-98fa764c7dad"> <img width="45%"  height="370" 
+ src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/fe552deb-c600-44dc-af6d-ea3c64459a63">
 
-<img width:"45%" src=""> <img width:"45%" src="">
-<img width:"45%" src=""> <img width:"45%" src="">
+#### [메인 및 채용공고]
+<img height="370"  width="45%" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/70ae0696-4363-40e7-ba61-32bf37d41ec9">  <img width="45%" 
+height="370"  src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/33a8f691-fb21-4e0e-8db8-33e509ca8bd7)">
+
+##### [커뮤니티 및 기관 리뷰]
+<img height="370"  width="45%" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/9caa76ea-51aa-435c-a912-e9a7d5b0783d"> <img height="370"  width="45%" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/38433b32-027b-403b-a6d8-a085ffea22a2">
 
 ##
 
