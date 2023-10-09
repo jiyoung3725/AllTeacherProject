@@ -41,15 +41,15 @@
 
 #### 상세화면
 ##### [로그인 및 회원가입]
-<img width="45%" height="370" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/7f31680d-20de-4ed0-a091-98fa764c7dad"> <img width="45%"  height="370" 
- src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/fe552deb-c600-44dc-af6d-ea3c64459a63">
+<img width="45%" height="370" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/7bd76e77-d781-4905-8ef7-3ff32a65c9a2"> <img width="45%"  height="370" 
+ src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/a90eca16-957a-48d4-863c-f4379064210f">
 
 #### [메인 및 채용공고]
-<img height="370"  width="45%" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/70ae0696-4363-40e7-ba61-32bf37d41ec9">  <img width="45%" 
-height="370"  src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/33a8f691-fb21-4e0e-8db8-33e509ca8bd7">
+<img height="370"  width="45%" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/6ff25a2e-0e4e-4b64-a6f1-0f103b6e4a85">  <img width="45%" 
+height="370"  src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/78b6eb46-a647-45fd-85e9-eb642ad6db4d">
 
 ##### [커뮤니티 및 기관 리뷰]
-<img height="370"  width="45%" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/9caa76ea-51aa-435c-a912-e9a7d5b0783d"> <img height="370"  width="45%" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/38433b32-027b-403b-a6d8-a085ffea22a2">
+<img height="370"  width="45%" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/3a19c7a3-bfcb-4a93-a67d-9a5c5971d1aa"> <img height="370"  width="45%" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/2f2ece0e-505a-438d-b70d-32d220e726e3">
 
 ##
 
