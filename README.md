@@ -1,6 +1,6 @@
 ### 모두의교사 개인 프로젝트
 ##
-<p align="center"><img width="300" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/9e13b518-cfe5-4a14-97f4-c3796306b8d6"></p>
+<p align="center"><img width="300" src="https://github.com/jiyoung3725/AllTeacherProject/assets/130877885/ef8c4157-adce-47cf-abc3-deb58f6e390f"></p>
 
 ##
 
