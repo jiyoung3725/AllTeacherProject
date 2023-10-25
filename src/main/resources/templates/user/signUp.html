@@ -10,48 +10,53 @@
 	
 	<div style="text-align: center; margin-bottom: 15px; margin-top: 30px;">
 		<input class="commons" id="chkbox" type="radio" value="1" name="group" checked/> 일반회원
-		<input class="company" id="chkbox" type="radio" value="2" name="group" style="margin-left: 15px;"/> 기업회원 
+		<input class="company" id="chkbox" type="radio" value="2" name="group" style="margin-left: 15px;"/> 기관회원 
 
 	</div>
 	
 	<div id="container">
-		<form id="commons_signUpForm">
-			<span>이름</span> <br /> <input type="text" class="user_name" placeholder="아이디를 입력하세요" /> <br />
-			<span>아이디</span> <br /> <input type="text" class="user_id" placeholder="아이디를 입력하세요" style="width: 70%;"/> <button class="id_check" type="button" id="btn_custom" >중복확인</button> <br />
-			<span>비밀번호</span>  <br /> <input type="password" class="user_pwd" placeholder="비밀번호를 입력하세요"/> <br />
+		<form id="commons_signUpForm" action="/signUp" method="post">
+			<input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+			<span>이름</span> <br /> <input type="text" class="userName" name="userName" placeholder="아이디를 입력하세요" /> <br />
+			<span>아이디</span> <br /> <input type="text" class="userId" name="userId" placeholder="아이디를 입력하세요" style="width: 70%;"/> <button class="id_check" type="button" id="btn_custom" >중복확인</button> <br />
+			<span>비밀번호</span>  <br /> <input type="password" class="userPwd" name="userPwd" placeholder="비밀번호를 입력하세요"/> <br />
 			<span>비밀번호 중복확인</span>  <br /> <input type="password" class="user_pwd_check" placeholder="비밀번호를 다시 입력하세요" style="width: 70%;"/><button type="button" class="pwd_check" id="btn_custom">비밀번호 확인</button>  <br />
 
 			<span>주소</span>  <br />
-			<input type="text" id="sample6_address" placeholder="주소" style="width: 70%;">
+			<input type="text" id="sample6_address" name="userAddr" placeholder="주소" style="width: 70%;">
 			<input id="btn_addr" type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" style="width: 29%;"><br>
-			<input type="text" id="sample6_detailAddress" placeholder="상세주소" style="width: 70%;">
+			<input type="text" id="sample6_detailAddress" name="userAddr" placeholder="상세주소" style="width: 70%;">
 			<input type="text" id="sample6_extraAddress" placeholder="참고항목" style="width: 29%;"> <br />	
 			
-			<span>전화번호</span>  <br /> <input type="tel" class="user_phone" placeholder="'-'를 제외한 전화번호 11자리 이상을 입력해주세요"/><br />
-			<span>이메일</span>  <br /> <input type="email" class="user_mail" style="width: 47%;"/> @ <input type="email" style="width: 47%;"/> 
-			<span>생년월일</span>  <br /> <input type="date" class="user_birth" ><br />
+			<span>전화번호</span>  <br /> <input type="tel" class="user_phone" name="userPhone" placeholder="'-'를 제외한 전화번호 11자리 이상을 입력해주세요"/><br />
+			<span>이메일</span>  <br /> <input type="email" name="userMail" class="userMail" />
+			<span>생년월일</span>  <br /> <input type="date" class="user_birth" name="userBirth" ><br />
+			<input type="hidden" name="companyTel" value=""/>
+			<input type="hidden" name="companyName" value=""/>
+			<input type="hidden" name="userType" value="회원"/>
 			<input type="submit" value="가입하기" id="custom_btn"/>
 		</form>
 		
 		
-		<form id="company_signUpForm">
-			<span>이름</span>  <br /> <input type="text" placeholder="이름을 입력하세요"/> <br />		
-			<span>아이디</span> <br /> <input class="company_id" type="text" placeholder="아이디를 입력하세요" style="width: 70%;"/> <button class="company_id_check" type="button" id="btn_custom" >중복확인</button> <br />
-			<span>비밀번호</span> <br /> <input class="company_pwd" type="password" placeholder="비밀번호를 입력하세요"/> <br />
+		<form id="company_signUpForm" action="/signUp" method="post">
+			<input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+			<span>이름</span>  <br /> <input type="text" name="userName" placeholder="이름을 입력하세요"/> <br />		
+			<span>아이디</span> <br /> <input class="company_id" name="userId" type="text" placeholder="아이디를 입력하세요" style="width: 70%;"/> <button class="company_id_check" type="button" id="btn_custom" >중복확인</button> <br />
+			<span>비밀번호</span> <br /> <input class="company_pwd" name="userPwd" type="password" placeholder="비밀번호를 입력하세요"/> <br />
 			<span>비밀번호 중복확인</span>  <br /> <input class="company_pwd_check_input" type="password" placeholder="비밀번호를 다시 입력하세요" style="width: 70%;"/><button type="button" class="company_pwd_check" id="btn_custom">비밀번호 확인</button>  <br />
-			<span>전화번호</span>  <br /> <input type="text" placeholder="'-'를 제외한 전화번호를 입력하세요"/> <br />			 
-			<span>생년월일</span>  <br /> <input type="date" ><br />
+			<span>전화번호</span>  <br /> <input type="text" name="userPhone" placeholder="'-'를 제외한 전화번호를 입력하세요"/> <br />			 
+			<span>생년월일</span>  <br /> <input type="date" name="userBirth" ><br />
 			
-			*기관 정보* <br />
-			<span>기관명</span>  <br /> <input type="text" placeholder="기관의 이름을 입력하세요"/> <br />	
+			<div style="margin-top: 20px; text-align: center; font-weight: bold;">*기관 정보*</div><br />
+			<span>기관명</span>  <br /> <input type="text" name="companyName" placeholder="기관의 이름을 입력하세요"/> <br />	
 			<span>주소</span>  <br />
-			<input type="text" id="sample6_address" placeholder="주소" style="width: 70%;">
+			<input type="text" id="sample6_address" name="userAddr" placeholder="주소" style="width: 70%;">
 			<input id="btn_addr" type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" style="width: 29%;"><br>
-			<input type="text" id="sample6_detailAddress" placeholder="상세주소" style="width: 70%;">
+			<input type="text" id="sample6_detailAddress" name="userAddr" placeholder="상세주소" style="width: 70%;">
 			<input type="text" id="sample6_extraAddress" placeholder="참고항목" style="width: 29%;"> <br />	
-			<span>전화번호</span>  <br /> <input type="text" placeholder="'-'를 제외한 기관 전화번호를 입력하세요"/> <br />	
-			<span>이메일</span>  <br /> <input type="email" style="width: 47%;"/> @ <input type="email" style="width: 47%;"/>			
-				
+			<span>전화번호</span>  <br /> <input type="text" name="companyTel" placeholder="'-'를 제외한 기관 전화번호를 입력하세요"/> <br />	
+			<span>이메일</span>  <br /> <input type="email" name="userMail" /> 	
+			<input type="hidden" name="userType" value="기관" />
 			<input type="submit" value="가입하기" id="custom_btn"/>
 		</form>
 	</div>
