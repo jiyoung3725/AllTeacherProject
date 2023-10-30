@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MainController {
@@ -16,15 +17,7 @@ public class MainController {
 		return "incruit/incruit";
 	}
 	
-	@GetMapping("/login")
-	public String login() {
-		return "user/login";
-	}
-	
-	@GetMapping("/signUp")
-	public String signUp() {
-		return "user/signUp";
-	}
+
 	@GetMapping("/comunity")
 	public String comunity() {
 		return "comunity/comunity";
@@ -33,5 +26,8 @@ public class MainController {
 	public String review() {
 		return "review/review";
 	}
+	
+
+	
 	
 }

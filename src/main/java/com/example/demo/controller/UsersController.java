@@ -1,16 +1,24 @@
 package com.example.demo.controller;
 
+import java.io.Console;
+import java.util.HashMap;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.repasitory.UsersRepository;
 import com.example.demo.service.UsersService;
 import com.example.demo.vo.UsersVO;
+
+import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
 public class UsersController {
@@ -30,7 +38,8 @@ public class UsersController {
 	}
 	
 	@PostMapping("/login")
-	public String login() {
+	public String login(String userId) {
+		users.findByUserId(userId);
 		
 		return "redirect:/";
 	}
@@ -56,6 +65,21 @@ public class UsersController {
 		user.setUserPwd(encoder.encode(user.getUserPwd()));
 		users.insert(user);
 		return "redirect:/";
+	}
+	
+	@RequestMapping("/user/checked")
+	@ResponseBody
+	public HashMap<String, String> checkedId(@RequestParam("userId") String userId ) {
+		System.out.println("왜 안동작하는데 왜왜오애ㅗ애ㅗ애ㅗ애왜!!!" + userId);
+		HashMap<String, String> map = new HashMap<>();
+		
+//		if(userId) {
+//			map.put("msg", "사용할 수 없는 아이디입니다.");
+//		}else {
+//			map.put("msg", "사용할 수 있는 아이디입니다.");
+//		}
+		return map;
+		
 	}
 	
 }

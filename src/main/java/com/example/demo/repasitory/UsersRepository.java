@@ -38,4 +38,6 @@ public interface UsersRepository extends JpaRepository<UsersVO, Integer>{
 	//번호로 회원 조회
 	public Optional<UsersVO> findByUserPhone(String userPhone);
 	
+	
+	
 }

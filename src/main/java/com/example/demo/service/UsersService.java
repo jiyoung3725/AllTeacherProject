@@ -3,6 +3,8 @@ package com.example.demo.service;
 import java.util.List; 
 import java.util.Optional;
 
+import org.springframework.security.core.userdetails.User;
+
 import com.example.demo.vo.UsersVO;
 
 public interface UsersService {
@@ -22,5 +24,6 @@ public interface UsersService {
 	
 	//전화번호로 회원 찾기
 	public Optional<UsersVO> findByUserPhone(String userPhone);
+
 
 }

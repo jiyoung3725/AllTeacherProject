@@ -18,9 +18,12 @@
 	<div class="line-none"></div>
 	
 	<div class="container">
-		<input type="text" placeholder="ID" style="margin-bottom: 15px;"/> <br />
-		<input type="password" placeholder="PASSWORD" style="margin-bottom: 15px;"/> <br />
-		<input type="submit" value="로그인"/ id="custom_btn" style="margin-bottom: 15px;"> <br />
+		<form action="/login" method="post">
+			<input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+			<input type="text" placeholder="ID" name="userId" style="margin-bottom: 15px;"/> <br />
+			<input type="password" placeholder="PASSWORD" name="userPwd" style="margin-bottom: 15px;"/> <br />
+			<input type="submit" value="로그인"/ id="custom_btn" style="margin-bottom: 15px;"> <br />
+		</form>>
 		<a href="" id="find">아이디 찾기</a>  |
 		<a href="" id="find">비밀번호 찾기</a> 
 		<br />

@@ -4,7 +4,9 @@ package com.example.demo.vo;
 
 import java.sql.Date;
 
+
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.validation.annotation.Validated;
 
 import io.micrometer.common.util.StringUtils;
 import jakarta.persistence.Column;
@@ -22,7 +24,6 @@ import lombok.Setter;
 @Table(name = "users")
 @Getter
 @Setter
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 
